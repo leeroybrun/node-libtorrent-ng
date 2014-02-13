@@ -1,0 +1,16 @@
+#include <boost/thread.hpp>
+#include <boost/date_time.hpp>
+#include <boost/filesystem.hpp>
+#include <boost/bind.hpp>
+#include <boost/ref.hpp>
+//#include <boost/multi_index.hpp>
+#include <boost/optional.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/integer.hpp>
+#include <boost/iterator.hpp>
+#include <boost/tuple/tuple.hpp>
+#include <boost/array.hpp>
+#include <boost/function.hpp>
+#include <boost/smart_ptr.hpp>
+#include <boost/preprocessor.hpp>
+#include <boost/static_assert.hpp>

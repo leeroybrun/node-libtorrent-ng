@@ -1,0 +1,54 @@
+# http://stackoverflow.com/a/2881694/1160800
+
+#!/bin/sh 
+BOOST_SRC=/Users/leeroybrun/Downloads/boost_1_55_0
+DEST_DIR=../deps/boost
+
+# make bcp if necessary
+if ( ! test -x $BOOST_SRC/dist/bin/bcp ) then
+    if ( test -x $BOOST_SRC/bjam ) then
+        BJAM=$BOOST_SRC/bjam
+    else
+        echo "### Building bjam"
+        pushd $BOOST_SRC/tools/jam
+        ./build_dist.sh
+        popd
+        if ( test -x $BOOST_SRC/tools/jam/*/bin.*/bjam ) then
+            BJAM=$BOOST_SRC/tools/jam/*/bin.*/bjam
+        fi
+
+    fi
+    echo "BJAM: $BJAM"
+    pushd $BOOST_SRC/tools/bcp
+    echo "### Building bcp"
+    echo "$BJAM"
+    $BJAM
+    if [ $? == "0" ]; then
+        exit 1;
+    fi
+    popd
+fi
+
+if ( ! test -x $BOOST_SRC/dist/bin/bcp) then
+    echo "### Couldn't find bpc"
+    exit 1;
+fi
+
+mkdir -p $DEST_DIR
+
+echo "### List all source files"
+find ../deps/libtorrent/include/libtorrent -name '*.hpp' -o -name '*.cpp' -o -name '*.c' -o -name '*.h' > files.txt
+
+echo "### Extracting boost includes"
+cat files.txt | xargs -I {} $BOOST_SRC/dist/bin/bcp --scan --boost=$BOOST_SRC {} $DEST_DIR
+if [ $? != "0" ]; then
+    echo "### bcp failed"
+    rm -rf $DEST_DIR
+    exit 1;
+fi
+
+# Copy all boost/asio headers files + crc.hpp
+# Copy all libs files : atomic, date_time, exception, smart_ptr, system, thread ?
+
+echo "### Please add these files to the binding.gyp file"
+find ../deps/boost/libs -name '*.cpp' | sed 's/\.\.\///g'

@@ -1,9 +1,12 @@
+# Really messy and big file, can be good to seperate in other files for boost and libtorrent
 {
+  "includes": [ "deps/common.gypi" ],
   "targets": [
     {
-      "target_name": "libtorrent",
-      "product_name": "libtorrent",
+      "target_name": "node_libtorrent",
+      'type': 'executable',
       "sources": [
+        # Node.js libtorrent bindings sources
       	"src/module.cpp",
 
         "src/add_torrent_params.cpp",
@@ -22,23 +25,25 @@
         "src/storage.cpp",
         "src/torrent_handle.cpp",
         "src/torrent_info.cpp",
-        "src/torrent_status.cpp"
+        "src/torrent_status.cpp",
       ],
-      "cflags_cc": [
-        "-fPIC",
-        "`pkg-config --cflags libtorrent-rasterbar`"
+      'defines': [
+        '_LIB',
+        'UNICODE',
+        'BOOST_ASIO_HASH_MAP_BUCKETS=1021',
+        'BOOST_FILESYSTEM_VERSION=2'
+      ], 
+      'dependencies': [
+        'deps/libtorrent/libtorrent.gyp:libtorrent'
       ],
-      "cflags_cc!": [
-        "-fno-exceptions"
+      'include_dirs': [
+        'deps/libtorrent',
+        'deps/libtorrent/include',
+        'deps/libtorrent/include/libtorrent',
+        'deps/boost',
+        'deps/boost/boost'
       ],
-      "ldflags": [],
-      "libraries": [
-        "`pkg-config --libs libtorrent-rasterbar`"
-      ],
-      "conditions": [
-        ["OS=='linux'", {  
-        }]
-      ]
+      "ldflags": []
     }
   ]
 }

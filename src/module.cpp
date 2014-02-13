@@ -44,5 +44,5 @@ namespace nodelt {
   };
 }; // namespace nodelt
 
-NODE_MODULE(libtorrent, nodelt::Initialize);
+NODE_MODULE(node_libtorrent, nodelt::Initialize);
 
