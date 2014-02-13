@@ -104,11 +104,13 @@ namespace nodelt {
       FunctionTemplate::New(add_extension)->GetFunction());
 #endif
 
+#ifndef TORRENT_DISABLE_GEO_IP
 #ifndef TORRENT_DISABLE_DHT
     tpl->PrototypeTemplate()->Set(String::NewSymbol("load_asnum_db"),
       FunctionTemplate::New(load_asnum_db)->GetFunction());
     tpl->PrototypeTemplate()->Set(String::NewSymbol("load_country_db"),
       FunctionTemplate::New(load_country_db)->GetFunction());
+#endif
 #endif
 
     tpl->PrototypeTemplate()->Set(String::NewSymbol("set_ip_filter"),
