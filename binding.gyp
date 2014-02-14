@@ -27,6 +27,17 @@
         "src/torrent_info.cpp",
         "src/torrent_status.cpp",
       ],
+      'link_settings': {
+        'libraries': [
+          '-llibboost_atomic',
+          '-llibboost_date_time',
+          '-llibboost_exception',
+          '-llibboost_smart_ptr',
+          '-llibboost_system',
+          '-llibboost_thread'
+          '-llibtorrent',
+        ],
+      },
       'defines': [
         '_LIB',
         'UNICODE',

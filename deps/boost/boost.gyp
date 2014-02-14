@@ -36,9 +36,6 @@
       'target_name': 'boost_atomic',
       'product_prefix': 'lib',
       'type': 'static_library',
-      'link_settings': {
-        'libraries': ['-llibboost_atomic'],  # cruncher.cc does math.
-      },
       'hard_dependency': 1,
       'sources': [
         "libs/atomic/src/lockpool.cpp",
@@ -48,9 +45,6 @@
       'target_name': 'boost_date_time',
       'product_prefix': 'lib',
       'type': 'static_library',
-      'link_settings': {
-        'libraries': ['-llibboost_date_time'],  # cruncher.cc does math.
-      },
       'hard_dependency': 1,
       'sources': [
         "libs/date_time/src/gregorian/date_generators.cpp",
@@ -71,9 +65,6 @@
       'target_name': 'boost_exception',
       'product_prefix': 'lib',
       'type': 'static_library',
-      'link_settings': {
-        'libraries': ['-llibboost_exception'],  # cruncher.cc does math.
-      },
       'hard_dependency': 1,
       'sources': [
         "libs/exception/src/clone_current_exception_non_intrusive.cpp",
@@ -96,9 +87,6 @@
       'target_name': 'boost_system',
       'product_prefix': 'lib',
       'type': 'static_library',
-      'link_settings': {
-        'libraries': ['-llibboost_system'],  # cruncher.cc does math.
-      },
       'hard_dependency': 1,
       'sources': [
         "libs/system/src/error_code.cpp",
@@ -109,9 +97,8 @@
       'product_prefix': 'lib',
       'type': 'static_library',
       'link_settings': {
-        'libraries': ['-llibboost_thread'],  # cruncher.cc does math.
+        'libraries': ['-llibboost_date_time', '-llibboost_system']
       },
-      'libraries': ['-llibboost_date_time', '-llibboost_system'],
       'hard_dependency': 1,
       'sources': [
         "libs/thread/build/has_atomic_flag_lockfree_test.cpp",

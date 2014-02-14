@@ -11,8 +11,8 @@
         "src/alert.cpp",
         "src/allocator.cpp",
         "src/asio.cpp",
-        "src/asio_ssl.cpp",
-        "src/assert.cpp",
+        #"src/asio_ssl.cpp",
+        #"src/assert.cpp",
         "src/bandwidth_limit.cpp",
         "src/bandwidth_manager.cpp",
         "src/bandwidth_queue_entry.cpp",
@@ -103,16 +103,15 @@
         './include/libtorrent/'
       ],
       'link_settings': {
-        'libraries': ['-llibtorrent'],  # cruncher.cc does math.
+        'libraries': [
+          '-llibboost_atomic',
+          '-llibboost_date_time',
+          '-llibboost_exception',
+          '-llibboost_smart_ptr',
+          '-llibboost_system',
+          '-llibboost_thread'
+        ],  # cruncher.cc does math.
       },
-      'libraries': [
-        '-llibboost_atomic',
-        '-llibboost_date_time',
-        '-llibboost_exception',
-        '-llibboost_smart_ptr',
-        '-llibboost_system',
-        '-llibboost_thread'
-      ],
       'direct_dependent_settings': {
         'include_dirs': [
           './',
