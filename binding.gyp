@@ -75,6 +75,165 @@
         'deps/boost/boost'
       ],
       "ldflags": []
+    },
+
+    # CLIENT_TEST
+    {
+      "target_name": "libtorrent_client_test",
+      'type': 'executable',
+      "sources": [
+        'deps/libtorrent/examples/client_test.cpp'
+      ],
+      'include_dirs': [
+        'deps/boost/inc-examples',
+        ],
+      'xcode_settings': {
+      "OTHER_CFLAGS": [
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'OTHER_CPLUSPLUSFLAGS':[
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'GCC_ENABLE_CPP_RTTI': 'YES',
+      'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+    },
+      'dependencies': [
+        'deps/libtorrent/libtorrent.gyp:libtorrent',
+        'deps/boost/boost.gyp:boost_atomic',
+        'deps/boost/boost.gyp:boost_date_time',
+        'deps/boost/boost.gyp:boost_exception',
+        'deps/boost/boost.gyp:boost_smart_ptr',
+        'deps/boost/boost.gyp:boost_system',
+        'deps/boost/boost.gyp:boost_thread'
+      ]
+    },
+
+    # CONNECTION_TESTER
+    {
+      "target_name": "libtorrent_connection_tester",
+      'type': 'executable',
+      "sources": [
+        'deps/libtorrent/examples/connection_tester.cpp'
+      ],
+      'include_dirs': [
+        'deps/boost/inc-examples',
+        ],
+      'xcode_settings': {
+      "OTHER_CFLAGS": [
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'OTHER_CPLUSPLUSFLAGS':[
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'GCC_ENABLE_CPP_RTTI': 'YES',
+      'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+    },
+      'dependencies': [
+        'deps/libtorrent/libtorrent.gyp:libtorrent',
+        'deps/boost/boost.gyp:boost_atomic',
+        'deps/boost/boost.gyp:boost_date_time',
+        'deps/boost/boost.gyp:boost_exception',
+        'deps/boost/boost.gyp:boost_smart_ptr',
+        'deps/boost/boost.gyp:boost_system',
+        'deps/boost/boost.gyp:boost_thread'
+      ]
+    },
+
+    # SIMPLE_CLIENT
+    {
+      "target_name": "libtorrent_simple_client",
+      'type': 'executable',
+      "sources": [
+        'deps/libtorrent/examples/simple_client.cpp'
+      ],
+      'include_dirs': [
+        'deps/boost/inc-examples',
+        ],
+      'xcode_settings': {
+      "OTHER_CFLAGS": [
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'OTHER_CPLUSPLUSFLAGS':[
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'GCC_ENABLE_CPP_RTTI': 'YES',
+      'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+    },
+      'dependencies': [
+        'deps/libtorrent/libtorrent.gyp:libtorrent',
+        'deps/boost/boost.gyp:boost_atomic',
+        'deps/boost/boost.gyp:boost_date_time',
+        'deps/boost/boost.gyp:boost_exception',
+        'deps/boost/boost.gyp:boost_smart_ptr',
+        'deps/boost/boost.gyp:boost_system',
+        'deps/boost/boost.gyp:boost_thread'
+      ]
     }
   ]
 }
