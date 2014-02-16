@@ -40,6 +40,39 @@
       'sources': [
         "libs/atomic/src/lockpool.cpp",
       ],
+      'xcode_settings': {
+        "OTHER_CFLAGS": [
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'OTHER_CPLUSPLUSFLAGS':[
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'GCC_ENABLE_CPP_RTTI': 'YES',
+        'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+      },
+      
     },
     {
       'target_name': 'boost_date_time',
@@ -59,7 +92,39 @@
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
           }
         }]
-      ]
+      ],
+      'xcode_settings': {
+        "OTHER_CFLAGS": [
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'OTHER_CPLUSPLUSFLAGS':[
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'GCC_ENABLE_CPP_RTTI': 'YES',
+        'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+      },
     },
     {
       'target_name': 'boost_exception',
@@ -69,19 +134,80 @@
       'sources': [
         "libs/exception/src/clone_current_exception_non_intrusive.cpp",
       ],
+      'xcode_settings': {
+        "OTHER_CFLAGS": [
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'OTHER_CPLUSPLUSFLAGS':[
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'GCC_ENABLE_CPP_RTTI': 'YES',
+        'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+      },
     },
     {
       'target_name': 'boost_smart_ptr',
       'product_prefix': 'lib',
       'type': 'static_library',
-      'link_settings': {
-        'libraries': ['-llibboost_smart_ptr'],  # cruncher.cc does math.
-      },
       'hard_dependency': 1,
       'sources': [
         "libs/smart_ptr/src/sp_collector.cpp",
         "libs/smart_ptr/src/sp_debug_hooks.cpp",
       ],
+      'xcode_settings': {
+        "OTHER_CFLAGS": [
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'OTHER_CPLUSPLUSFLAGS':[
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'GCC_ENABLE_CPP_RTTI': 'YES',
+        'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+      },
     },
     {
       'target_name': 'boost_system',
@@ -91,20 +217,81 @@
       'sources': [
         "libs/system/src/error_code.cpp",
       ],
+      'xcode_settings': {
+        "OTHER_CFLAGS": [
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'OTHER_CPLUSPLUSFLAGS':[
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'GCC_ENABLE_CPP_RTTI': 'YES',
+        'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+      },
     },
     {
       'target_name': 'boost_thread',
       'product_prefix': 'lib',
       'type': 'static_library',
-      'link_settings': {
-        'libraries': ['-llibboost_date_time', '-llibboost_system']
-      },
       'hard_dependency': 1,
       'sources': [
         "libs/thread/build/has_atomic_flag_lockfree_test.cpp",
         "libs/thread/src/future.cpp",
         "libs/thread/src/tss_null.cpp"
       ],
+      'xcode_settings': {
+        "OTHER_CFLAGS": [
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'OTHER_CPLUSPLUSFLAGS':[
+          '-fPIC',
+          '-Wno-parentheses-equality',
+          '-Wno-unused-value',
+          '-Wno-unused-private-field',
+          '-Wno-sign-compare',
+          '-ftemplate-depth-128',
+          '-O0',
+          '-fno-inline',
+          '-g',
+          '-gdwarf-2',
+          '-fexceptions',
+          '-ftrapv'
+        ],
+        'GCC_ENABLE_CPP_RTTI': 'YES',
+        'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+      },
       'dependencies': [
         'boost_date_time',
         'boost_system'

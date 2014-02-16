@@ -4,7 +4,6 @@
   "targets": [
     {
       "target_name": "node_libtorrent",
-      'type': 'executable',
       "sources": [
         # Node.js libtorrent bindings sources
       	"src/module.cpp",
@@ -27,18 +26,39 @@
         "src/torrent_info.cpp",
         "src/torrent_status.cpp",
       ],
-      'link_settings': {
-        'libraries': [
-          '-llibboost_atomic',
-          '-llibboost_date_time',
-          '-llibboost_exception',
-          '-llibboost_smart_ptr',
-          '-llibboost_system',
-          '-llibboost_thread'
-          '-llibtorrent',
-        ],
-      },
-      'defines': [
+      'xcode_settings': {
+      "OTHER_CFLAGS": [
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'OTHER_CPLUSPLUSFLAGS':[
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'GCC_ENABLE_CPP_RTTI': 'YES',
+      'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+    },
+    'defines': [
         '_LIB',
         'UNICODE',
         'BOOST_ASIO_HASH_MAP_BUCKETS=1021',

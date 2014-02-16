@@ -95,23 +95,16 @@
         "src/utp_socket_manager.cpp",
         "src/utp_stream.cpp",
         "src/web_connection_base.cpp",
-        "src/web_peer_connection.cpp"
+        "src/web_peer_connection.cpp",
+
+        # Tommath
+        "src/mpi.c"
       ],
       'include_dirs': [
         './',
         './include/',
         './include/libtorrent/'
       ],
-      'link_settings': {
-        'libraries': [
-          '-llibboost_atomic',
-          '-llibboost_date_time',
-          '-llibboost_exception',
-          '-llibboost_smart_ptr',
-          '-llibboost_system',
-          '-llibboost_thread'
-        ],  # cruncher.cc does math.
-      },
       'direct_dependent_settings': {
         'include_dirs': [
           './',
@@ -119,7 +112,39 @@
           './include/libtorrent/'
         ],
       },
-      'defines': [
+      'xcode_settings': {
+      "OTHER_CFLAGS": [
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'OTHER_CPLUSPLUSFLAGS':[
+        '-fPIC',
+        '-Wno-parentheses-equality',
+        '-Wno-unused-value',
+        '-Wno-unused-private-field',
+        '-Wno-sign-compare',
+        '-ftemplate-depth-128',
+        '-O0',
+        '-fno-inline',
+        '-g',
+        '-gdwarf-2',
+        '-fexceptions',
+        '-ftrapv'
+      ],
+      'GCC_ENABLE_CPP_RTTI': 'YES',
+      'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+    },
+    'defines': [
         '_LIB'
       ],
       'dependencies': [
