@@ -38,8 +38,9 @@
             'BOOST_THREAD_BUILD_LIB=1',
             'BOOST_THREAD_USE_LIB=1',
             'BOOST_THREAD_DONT_USE_CHRONO',
+            'BOOST_FILESYSTEM_VERSION=2',
 
-            # libtorrent defines
+            # Libtorrent defines
             'TORRENT_PRODUCTION_ASSERTS=1',
             'TORRENT_RELEASE_ASSERTS=1',
             'TORRENT_DISABLE_INVARIANT_C',

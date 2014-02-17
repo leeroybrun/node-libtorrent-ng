@@ -122,7 +122,8 @@
                 'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
             },
             'defines': [
-                '_LIB'
+                '_LIB',
+                '<@(default_defines)'
             ],
             'dependencies': [
                 '../boost/boost.gyp:boost_atomic',
