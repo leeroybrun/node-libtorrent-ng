@@ -3,3 +3,4 @@ npm-debug.log
 build
 examples/test.torrent
 .DS_Store
+deps/boost/inc-examples

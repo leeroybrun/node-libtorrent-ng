@@ -86,6 +86,7 @@
       ],
       'include_dirs': [
         'deps/boost/inc-examples',
+        'deps/boost/inc-examples/boost',
         ],
       'xcode_settings': {
       "OTHER_CFLAGS": [
@@ -139,6 +140,7 @@
       ],
       'include_dirs': [
         'deps/boost/inc-examples',
+        'deps/boost/inc-examples/boost',
         ],
       'xcode_settings': {
       "OTHER_CFLAGS": [
@@ -192,6 +194,7 @@
       ],
       'include_dirs': [
         'deps/boost/inc-examples',
+        'deps/boost/inc-examples/boost',
         ],
       'xcode_settings': {
       "OTHER_CFLAGS": [
