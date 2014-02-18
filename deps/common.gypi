@@ -44,7 +44,7 @@
             'TORRENT_PRODUCTION_ASSERTS=1',
             'TORRENT_RELEASE_ASSERTS=1',
             'TORRENT_DISABLE_INVARIANT_C',
-            'TORRENT_DEBUG',
+            #'TORRENT_DEBUG',
             'TORRENT_USE_I2P=1',
 
             # TODO: enable GeoIP ?
@@ -55,26 +55,10 @@
         ]
     },
     'target_defaults': {
-        'default_configuration': 'Debug',
-        'configurations': {
-            'Debug': {
-                'defines': [ 'DEBUG', '_DEBUG' ],
-                'msvs_settings': {
-                    'VCCLCompilerTool': {
-                        'RuntimeLibrary': 1, # static debug
-                    },
-                },
-            },
-            'Release': {
-                'defines': [ 'NDEBUG' ],
-                'msvs_settings': {
-                    'VCCLCompilerTool': {
-                        'RuntimeLibrary': 0, # static release
-                    },
-                },
-            }
-        },
         'msvs_settings': {
+            'VCCLCompilerTool': {
+                'RuntimeLibrary': 0, # static release
+            },
             'VCLinkerTool': {
                 'GenerateDebugInformation': 'true',
             },
