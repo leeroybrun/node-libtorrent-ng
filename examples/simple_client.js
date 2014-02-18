@@ -6,6 +6,9 @@ try {
 	lt = require("../build/Release/node_libtorrent");
 }
 
+var torrentFile = process.argv[2];
+var savePath = process.argv[3];
+
 s = new lt.session();
 
 s.listen_on([6881, 6889]);
@@ -21,11 +24,11 @@ s.add_extension('lt_trackers');
 s.add_extension('metadata_transfer');
 s.add_extension('smart_ban');
 
-ti = new lt.torrent_info("./test.torrent");
+ti = new lt.torrent_info(torrentFile);
 
 th = s.add_torrent({
   ti: ti,
-  save_path: "./test_torrent"
+  save_path: savePath
 });
 
 th.force_recheck();

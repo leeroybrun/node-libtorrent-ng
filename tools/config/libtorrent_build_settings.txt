@@ -1,0 +1,110 @@
+--------------------------------------
+ Build settings took from Jamfile
+--------------------------------------
+
+OPENSSL
+	<source>src/asio_ssl.cpp
+
+	WIN
+		<library>gdi32
+		<library>ssleay32
+		<library>libeay32
+		<library>advapi32
+		<library>user32
+		<library>shell32
+
+	NOT_WIN
+		<library>crypto
+		<library>ssl
+		<library>z
+
+	LINUX
+		<library>dl
+
+TOMMATH
+	<source>src/mpi.c
+	<source>src/sha1.cpp
+
+GEOIP STATIC
+	<source>src/GeoIP.c
+
+GEOIP DISABLE
+	<define>TORRENT_DISABLE_GEO_IP
+
+GCRYPT
+	<library>gcrypt
+	<include>/opt/local/include
+
+I2P
+	<define>TORRENT_USE_I2P=1
+
+FPIC
+	feature.compose <fpic>on : <cflags>-fPIC ;
+	feature.compose <fpic>off : <toolset>darwin:<cflags>-mdynamic-no-pic ;
+
+GENERAL
+	<define>BOOST_ALL_NO_LIB
+	<define>TORRENT_PRODUCTION_ASSERTS=1
+	<define>TORRENT_RELEASE_ASSERTS=1
+	<define>TORRENT_DISABLE_INVARIANT_C
+	<define>_UNICODE
+	<define>UNICODE
+	<include>/usr/sfw/include
+	<include>/usr/local/include
+	<define>NDEBUG
+	<define>_FILE_OFFSET_BITS=64
+	<define>BOOST_EXCEPTION_DISABLE
+	<define>BOOST_ASIO_ENABLE_CANCELIO
+	<define>BOOST_ASIO_HASH_MAP_BUCKETS=1021
+
+	WIN
+		<library>ws2_32
+		<library>wsock32
+		<library>iphlpapi
+		<define>WIN32_LEAN_AND_MEAN
+		<define>__USE_W32_SOCKETS
+		<define>WIN32
+		<define>_WIN32
+
+		# these compiler settings just makes the compiler standard conforming
+			<toolset>msvc:<cflags>/Zc:wchar_t
+			<toolset>msvc:<cflags>/Zc:forScope
+		# disable bogus deprecation warnings on msvc8
+			<toolset>msvc:<define>_SCL_SECURE_NO_DEPRECATE
+			<toolset>msvc:<define>_CRT_SECURE_NO_DEPRECATE
+		# msvc optimizations
+			<toolset>msvc,<variant>release:<linkflags>/OPT:ICF=5
+			<toolset>msvc,<variant>release:<linkflags>/OPT:REF
+		# disable warning C4503: decorated name length exceeded, name was truncated
+			<toolset>msvc:<cxxflags>/wd4503
+		# disable warning C4275: non-dll interface class 'x' used as base for dll-interface struct 'y'
+			<toolset>msvc:<cxxflags>/wd4275
+		# disable warning C4251: 'x' needs to have dll-interface to be used by clients of class 'y'
+			<toolset>msvc:<cxxflags>/wd4251
+
+		WIN7
+			<define>_WIN32_WINNT=0x0601
+		VISTA
+			<define>_WIN32_WINNT=0x0600
+		XP
+			<define>_WIN32_WINNT=0x0501
+
+	NOT WIN
+
+	BEOS
+		<library>netkit
+		<library>gcc
+
+	SOLARIS
+		<library>libsocket
+		<library>libnsl
+
+	NEED-LIBRT ?
+		<library>librt
+
+	(ICONV
+		<library>libiconv)
+
+	LINUX
+
+	MACOS
