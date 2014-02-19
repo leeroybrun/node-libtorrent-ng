@@ -1,33 +1,36 @@
 {
-  "name": "libtorrent",
-  "description": "unofficial node.js bindings for rasterbar's libbtorrent (www.libtorrent.org)",
-  "author": "Nikolai Gorchilov <niki@gorchilov.com>",
-  "homepage": "https://github.com/ngorchilov/node-libtorrent-ng",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ngorchilov/node-libtorrent-ng.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ngorchilov/node-libtorrent-ng/issues"
-  },
-  "main": "./lib/libtorrent.js",
-  "version": "0.0.3",
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "dependencies": {},
-  "scripts": {
-    "install": "node-gyp rebuild",
-    "test": "jasmine-node --coffee spec/"
-  },
-  "keywords": [
-    "libtorrent",
-    "torrents"
-  ],
-  "readmeFilename": "README.md",
-  "gypfile": true,
-  "directories": {
-    "example": "examples"
-  },
-  "license": "MIT"
+    "name": "libtorrent-rb",
+    "description": "Node.js bindings for rasterbar's libbtorrent with easy install",
+    "author": "Leeroy Brun <leeroy.brun@gmail.com>",
+    "homepage": "https://github.com/leeroybrun/node-libtorrent-rb",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leeroybrun/node-libtorrent-rb.git"
+    },
+    "bugs": {
+        "url": "https://github.com/leeroybrun/node-libtorrent-rb/issues"
+    },
+    "main": "./lib/libtorrent.js",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "dependencies": {},
+    "scripts": {
+        "install": "node-gyp rebuild"
+    },
+    "keywords": [
+        "libtorrent",
+        "torrents",
+        "torrent",
+        "client",
+        "bittorrent",
+        "bittorrent client"
+    ],
+    "readmeFilename": "README.md",
+    "gypfile": true,
+    "directories": {
+        "example": "examples"
+    },
+    "license": "MIT"
 }

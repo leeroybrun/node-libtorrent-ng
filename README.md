@@ -23,8 +23,7 @@ $ node-gyp build
 ```
 
 # TODO
-- Update lib/libtorrent.js
-- Update package.json
+- Configure node-pre-gyp & add to package.json
 - Clean tools/bcp_helper
 - Update libtorrent to latest version
 - Add OpenSSL optional support
