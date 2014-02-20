@@ -23,10 +23,9 @@ $ node-gyp build
 ```
 
 # TODO
+- Package deps in a compressed folder (example: https://github.com/mapbox/node-sqlite3/tree/master/deps)
 - Configure node-pre-gyp & add to package.json
-- Clean tools/bcp_helper
 - Update libtorrent to latest version
 - Add OpenSSL optional support
-- Package deps in a compressed folder (example: https://github.com/mapbox/node-sqlite3/tree/master/deps)
 - Use Travis-CI ?
 - Add options to node-gyp building
