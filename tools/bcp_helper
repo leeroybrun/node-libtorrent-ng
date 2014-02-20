@@ -1,7 +1,14 @@
 # http://stackoverflow.com/a/2881694/1160800
 
 #!/bin/sh 
-BOOST_SRC=/Users/leeroybrun/Downloads/boost_1_55_0
+
+# Change this to your downloaded version of Boost (source)
+BOOST_SRC=/Users/username/Downloads/boost_1_55_0
+
+################################################################
+# Don't touch anything below this
+################################################################
+
 DEST_DIR=../deps/boost
 
 # make bcp if necessary
