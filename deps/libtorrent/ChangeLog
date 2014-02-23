@@ -1,3 +1,11 @@
+0.16.15 release
+
+	* fix mingw time_t 64 bit issue
+	* fix use of SetFileValidData on windows
+	* fix crash when using full allocation storage mode
+	* improve error_code and error_category support in python bindings
+	* fix python binding for external_ip_alert
+
 0.16.14 release
 
 	* make lt_tex more robust against bugs and malicious behavior

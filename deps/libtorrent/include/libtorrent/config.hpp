@@ -42,13 +42,12 @@ POSSIBILITY OF SUCH DAMAGE.
 #error TORRENT_DEBUG_BUFFERS only works if you also disable pool allocators with TORRENT_DISABLE_POOL_ALLOCATOR
 #endif
 
-/* LEEROY EDIT
 #if !defined BOOST_ASIO_SEPARATE_COMPILATION && !defined BOOST_ASIO_DYN_LINK
 #error you must define either BOOST_ASIO_SEPARATE_COMPILATION or BOOST_ASIO_DYN_LINK in your project in \
 	order for asio's declarations to be correct. If you're linking dynamically against libtorrent, define \
 	BOOST_ASIO_DYN_LINK otherwise BOOST_ASIO_SEPARATE_COMPILATION. You can also use pkg-config or boost \
 	build, to automatically apply these defines
-#endif*/
+#endif
 
 #if !defined _MSC_VER || _MSC_VER >= 1600
 #ifndef __STDC_LIMIT_MACROS
@@ -215,8 +214,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #define TORRENT_MINGW
 #define TORRENT_WINDOWS
 #ifndef TORRENT_USE_ICONV
-#define TORRENT_USE_ICONV 0
-#define TORRENT_USE_LOCALE 1
+# define TORRENT_USE_ICONV 0
+# define TORRENT_USE_LOCALE 1
 #endif
 #define TORRENT_USE_RLIMIT 0
 #define TORRENT_USE_NETLINK 0
@@ -224,7 +223,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #define TORRENT_HAS_SALEN 0
 #define TORRENT_USE_GETIPFORWARDTABLE 1
 #ifndef TORRENT_USE_UNC_PATHS
-#define TORRENT_USE_UNC_PATHS 1
+# define TORRENT_USE_UNC_PATHS 1
 #endif
 
 // ==== WINDOWS ===
