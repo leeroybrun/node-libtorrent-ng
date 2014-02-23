@@ -122,7 +122,7 @@
             'type': 'static_library',
             'hard_dependency': 1,
             'sources': [
-                "libs/thread/build/has_atomic_flag_lockfree_test.cpp",
+                #"libs/thread/build/has_atomic_flag_lockfree_test.cpp",
                 "libs/thread/src/future.cpp",
                 "libs/thread/src/tss_null.cpp"
             ],
