@@ -25,6 +25,7 @@ $ node-gyp build
 # TODO
 - Use Travis-CI
 	- Debug travis build
+	- Add tests to validate builds
 - Package deps in a compressed folder (example: https://github.com/mapbox/node-sqlite3/tree/master/deps)
 - Configure node-pre-gyp & add to package.json
 - Add OpenSSL optional support
