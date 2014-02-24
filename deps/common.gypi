@@ -3,10 +3,10 @@
         # We define default cflags & defines so we can use them in targets, to force overhidding of existing settings
         'default_cflags': [
             #'-fPIC', # TODO: enable PIC ?
-            '-Wno-parentheses-equality',
-            '-Wno-unused-value',
-            '-Wno-unused-private-field',
-            '-Wno-sign-compare',
+            #'-Wno-parentheses-equality',
+            #'-Wno-unused-value',
+            #'-Wno-unused-private-field',
+            #'-Wno-sign-compare',
             '-ftemplate-depth-128',
             '-O0',
             '-fno-inline',

@@ -25,16 +25,6 @@
               "src/torrent_info.cpp",
               "src/torrent_status.cpp",
           ],
-          'xcode_settings': {
-              "OTHER_CFLAGS": [
-                  '<@(default_cflags)'
-              ],
-              'OTHER_CPLUSPLUSFLAGS':[
-                  '<@(default_cflags)'
-              ],
-              'GCC_ENABLE_CPP_RTTI': 'YES',
-              'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
-          },
           'defines': [
               '_LIB',
               '<@(default_defines)'
@@ -62,16 +52,6 @@
                 'deps/boost/inc-examples',
                 'deps/boost/inc-examples/boost',
             ],
-            'xcode_settings': {
-                "OTHER_CFLAGS": [
-                    '<@(default_cflags)'
-                ],
-                'OTHER_CPLUSPLUSFLAGS':[
-                    '<@(default_cflags)'
-                ],
-                'GCC_ENABLE_CPP_RTTI': 'YES',
-                'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
-            },
             'dependencies': [
                 'deps/libtorrent/libtorrent.gyp:libtorrent',
                 'deps/boost/boost.gyp:boost_atomic',
@@ -94,16 +74,6 @@
                 'deps/boost/inc-examples',
                 'deps/boost/inc-examples/boost',
             ],
-            'xcode_settings': {
-                "OTHER_CFLAGS": [
-                    '<@(default_cflags)'
-                ],
-                'OTHER_CPLUSPLUSFLAGS':[
-                    '<@(default_cflags)'
-                ],
-                'GCC_ENABLE_CPP_RTTI': 'YES',
-                'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
-            },
             'dependencies': [
                 'deps/libtorrent/libtorrent.gyp:libtorrent',
                 'deps/boost/boost.gyp:boost_atomic',
@@ -126,16 +96,6 @@
                 'deps/boost/inc-examples',
                 'deps/boost/inc-examples/boost',
             ],
-            'xcode_settings': {
-                "OTHER_CFLAGS": [
-                    '<@(default_cflags)'
-                ],
-                'OTHER_CPLUSPLUSFLAGS':[
-                    '<@(default_cflags)'
-                ],
-                'GCC_ENABLE_CPP_RTTI': 'YES',
-                'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
-            },
             'dependencies': [
                 'deps/libtorrent/libtorrent.gyp:libtorrent',
                 'deps/boost/boost.gyp:boost_atomic',
