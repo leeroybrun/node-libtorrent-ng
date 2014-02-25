@@ -2,7 +2,7 @@
 
 node-libtorrent-rb is a fork of [node-libtorrent](https://github.com/fanatid/node-libtorrent) and provides native bindings to [libtorrent rastebar](http://www.rasterbar.com/products/libtorrent/) as a [Node.js addon](http://nodejs.org/docs/latest/api/addons.html).
 
-There is a lot of forks out there. My goal here was to be able to easily use this module everywhere (Mac, Linux *and* Windows).
+There is a lot of forks out there. My goal here was to be able to easily use this module everywhere (Mac, Linux **and** Windows).
 
 Libtorrent and it's dependencies (Boost) are bundled and compiled with node-gyp. We then use node-pre-gyp to easily install the module from precompiled .node packages.
 

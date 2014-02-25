@@ -65,6 +65,7 @@ GENERAL
 		<define>__USE_W32_SOCKETS
 		<define>WIN32
 		<define>_WIN32
+		<define>TORRENT_WINDOWS
 
 		# these compiler settings just makes the compiler standard conforming
 			<toolset>msvc:<cflags>/Zc:wchar_t
