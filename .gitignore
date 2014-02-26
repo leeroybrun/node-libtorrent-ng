@@ -5,3 +5,4 @@ examples/test.torrent
 .DS_Store
 deps/boost/inc-examples
 tools/files.txt
+test/files/tmp

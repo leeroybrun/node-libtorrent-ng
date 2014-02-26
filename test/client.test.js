@@ -34,7 +34,7 @@ describe('session', function(){
             setTimeout(function() {
                 st = th.status();
                 done();
-            }, 180000);
+            }, 120000);
         });
 
         it('should not be errored', function(){
