@@ -16,6 +16,10 @@
         "node": ">= 0.8.0"
     },
     "dependencies": {},
+    "devDependencies":{
+        "mocha": "*",
+        "should": "*"
+    },
     "scripts": {
         "install": "node-gyp rebuild",
         "test": "mocha -R spec --timeout 200000"
