@@ -17,7 +17,8 @@
     },
     "dependencies": {},
     "scripts": {
-        "install": "node-gyp rebuild"
+        "install": "node-gyp rebuild",
+        "test": "mocha -R spec --timeout 200000"
     },
     "keywords": [
         "libtorrent",
