@@ -23,6 +23,7 @@ $ node-gyp build
 ```
 
 # TODO
+- http://cylonjs.com/blog/2014/11/19/creating-multiplatform-precompiled-binaries-for-node-modules/
 - Use Travis-CI
 	- Debug travis build
 	- Add tests to validate builds
